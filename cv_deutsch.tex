@@ -1,3 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.2 (25/3/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\usepackage[utf8]{inputenc}
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Imanol} % Your first name
+\familyname{Studer} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Wickenweg 51}{8048 Zürich}
+\mobile{+41 (0)76 462 67 16}
+% \phone{}
+% \fax{}
+\email{imanol.studer@gmail.com}
+% \homepage{}{} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \extrainfo{}
+\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+%
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}, Master Grades, Bachelor's Diploma} % List of enclosed documents
+%
+%\makelettertitle % Print letter title
+%
+%\lipsum[1-3] % Dummy text
+%
+%\makeletterclosing % Print letter signature
+%
+%\newpage
 %----------------------------------------------------------------------------------------
 %	CURRICULUM VITAE
 %----------------------------------------------------------------------------------------
@@ -55,17 +137,27 @@ Die Informatikmittelschule ist eine Ausbildung als Applikationsentwickler, ähnl
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Erfahrung}
+\section{Arbeitserfahrung}
 
-\cventry{2012--2015}{Software Developer}{\textsc{New Voice AG}}{Zürich}{}{New Voice AG is a company located in Zürich which develops a software called MobiCall which is an Alarm-, Information-, Conference and Callrecording system which is built on top of a PBX system. My responsibility was to develop and maintain a plugin for locating Dect and WiFi devices inside buildings and triggering alarms.}
+\cventry{2016--now}{Software Entwickler}{\textsc{Supercomputing Systems AG}}{Zürich}{}{Supercomputing Systems AG which developes outsourced software projects. During my time there I have been involved in the following projects as a software developer:
+\begin{itemize}
+	\item Gridsense: We developed a control software for electrical home devices that optimizes the power consumption of a household to minimize voltage variation in the power grid. I was responsible for the Software Architecture and IoT interface of the controllers.
+	\item Smartbox: The smartbox is a smart sensor that is placed on transformer stations and can be used to optimize the balance of power load in the electrical grid of a region. I was responsible for the development of different modules.
+	\item Renesas DNN: A Python interface to a neural network accelerator that is used in onboard car computers by different german car manufacturers. We implemented a software which converts trained networks to a architecture that fits the accelerator's specification. We also added floating-to-fixpoint conversion. My responsibility was to split the neural network convolutions into smaller operations and the fixpoint optimization part.
+	\item Rega Cell phone detector: We developed a simple case-study-prototype for rega which determines the direction of a cellphone using two antennas. I was responsible for the part that localizes the direction and plots the results on a map.
+	\item Transformation Tool for Schematics: Supercomputing Systems is developing a new railway controller based on FPGAs to replace the old ones. For this purpose we need an Editor that can be used to draw electrical schematics and convert them to VHDL code. I was responsible for programming the GUI using JavaFX.
+\end{itemize}
+}
+
+\cventry{2012--2015}{Software Entwickler}{\textsc{New Voice AG}}{Zürich}{}{New Voice AG is a company located in Zürich which develops a software called MobiCall which is an Alarm-, Information-, Conference and Callrecording system which is built on top of a PBX system. My responsibility was to develop and maintain a plugin for locating Dect and WiFi devices inside buildings and triggering alarms.}
 
 %------------------------------------------------
 
-\cventry{2011--2012}{Software Developer}{\textsc{TrueBPM Solutions AG}}{Zürich}{}{TrueBPM develops a BPM system that is used internally by an assurance company. While I was working there, I was responsible for letter generation. I had to design BIRT reports based on word documents and also do some server backend programming. I left the company after a year, because the project was finished and I wanted to do something more challenging.}
+\cventry{2011--2012}{Software Entwickler}{\textsc{TrueBPM Solutions AG}}{Zürich}{}{TrueBPM develops a BPM system that is used internally by an assurance company. While I was working there, I was responsible for letter generation. I had to design BIRT reports based on word documents and also do some server backend programming. I left the company after a year, because the project was finished and I wanted to do something more challenging.}
 
 %------------------------------------------------
 
-\cventry{2006--2011}{Software Developer}{\textsc{IT-GR GmbH}}{Zürich}{}{IT-Gr GmbH is a software developing company. During my time there I worked alone on a monitoring system for water recycling plants for a customer called Unimon GmbH. The software periodically pulls measured data from different sensors embedded in the water plant. Users can log in through a web interface, analyze the data and create reports. It is also possible to define conditions under which alarms are  triggered. It then automatically contacts the responsible person per E-Mail or SMS.
+\cventry{2006--2011}{Software Entwickler}{\textsc{IT-GR GmbH}}{Zürich}{}{IT-Gr GmbH is a software developing company. During my time there I worked alone on a monitoring system for water recycling plants for a customer called Unimon GmbH. The software periodically pulls measured data from different sensors embedded in the water plant. Users can log in through a web interface, analyze the data and create reports. It is also possible to define conditions under which alarms are  triggered. It then automatically contacts the responsible person per E-Mail or SMS.
 \newline
 My first year there (2006-2007) was an Internship as part of the “Informatikmittelschule”.}
 
@@ -85,12 +177,6 @@ My first year there (2006-2007) was an Internship as part of the “Informatikmi
 \cvitem{E-Mail}{\href{mailto:chat@ifi.uzh.ch}{chat@ifi.uzh.ch}}
 \cvitem{Telephon}{+41 (0)44 635 43 13}
 
-\subsection{Prof. Dr. Davide Scaramuzza}
-\cvitem{Link}{\href{http://rpg.ifi.uzh.ch/people\_scaramuzza.html}{http://rpg.ifi.uzh.ch/people\_scaramuzza.html}}
-\cvitem{}{Supervision of Master Project}
-\cvitem{E-Mail}{\href{mailto:sdavide@ifi.uzh.ch}{sdavide@ifi.uzh.ch}}
-\cvitem{Phone}{+41 (0)44 635 24 09}
-
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
@@ -105,11 +191,12 @@ My first year there (2006-2007) was an Internship as part of the “Informatikmi
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Languages}
+\section{Sprachen}
 
-\cvitemwithcomment{German}{Mothertongue}{}
-\cvitemwithcomment{Spanish}{Mothertongue}{}
-\cvitemwithcomment{English}{Intermediate}{Conversationally fluent}
+\cvitemwithcomment{Deutsch}{Muttersprache}{}
+\cvitemwithcomment{Spanisch}{Muttersprache}{}
+\cvitemwithcomment{Englisch}{Gut}{}
+\cvitemwithcomment{Französisch}{Grundlagen}{}
 
 %----------------------------------------------------------------------------------------
 
@@ -117,7 +204,7 @@ My first year there (2006-2007) was an Internship as part of the “Informatikmi
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Interests}
+\section{Interessen}
 
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
@@ -126,13 +213,13 @@ My first year there (2006-2007) was an Internship as part of the “Informatikmi
 \cvlistdoubleitem{Workout}{Swimming}
 
 \newgeometry{bottom=0pt}
-\section{Master Grades - Exempt from module booking system}
+\section{Master Diplom}
 \includegraphics[width=\textwidth]{pictures/master/module1.png}
 \includegraphics[width=\textwidth]{pictures/master/module2.png}
 
 \enlargethispage{12pt}
 \newpage
-\section{Bachelor's Diploma}
+\section{Bachelor Diplom}
 \includegraphics[width=\textwidth]{pictures/bachelor/page0.png}
 \includegraphics[width=\textwidth]{pictures/bachelor/page1.png}
 \includegraphics[width=\textwidth]{pictures/bachelor/page2.png}

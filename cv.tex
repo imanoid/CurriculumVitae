@@ -65,21 +65,21 @@
 
 % To remove the cover letter, comment out this entire block
 
-\clearpage
-
-\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-\date{\today} % Letter date
-\opening{Dear Sir or Madam,} % Opening greeting
-\closing{Sincerely yours,} % Closing phrase
-\enclosure[Attached]{curriculum vit\ae{}, Master Grades, Bachelor's Diploma} % List of enclosed documents
-
-\makelettertitle % Print letter title
-
-\lipsum[1-3] % Dummy text
-
-\makeletterclosing % Print letter signature
-
-\newpage
+%\clearpage
+%
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}, Master Grades, Bachelor's Diploma} % List of enclosed documents
+%
+%\makelettertitle % Print letter title
+%
+%\lipsum[1-3] % Dummy text
+%
+%\makeletterclosing % Print letter signature
+%
+%\newpage
 
 %----------------------------------------------------------------------------------------
 %	CURRICULUM VITAE
@@ -138,9 +138,19 @@ The Informatikmittelschule provides a practically oriented education as a progra
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Experience}
+\section{Working Experience}
 
-\cventry{2012--2015}{Software Developer}{\textsc{New Voice AG}}{Zürich}{}{New Voice AG is a company located in Zürich which develops a software called MobiCall which is an Alarm-, Information-, Conference and Callrecording system which is built on top of a PBX system. My responsibility was to develop and maintain a plugin for locating Dect and WiFi devices inside buildings and triggering alarms.}
+\cventry{2016--now}{Software Developer}{\textsc{Supercomputing Systems AG}}{Zürich}{}{Supercomputing Systems AG which developes outsourced software projects. During my time there I have been involved in the following projects as a software developer:
+\begin{itemize}
+	\item Gridsense: We developed a control software for electrical home devices that optimizes the power consumption of a household to minimize voltage variation in the power grid. I was responsible for the Software Architecture and IoT interface of the controllers.
+	\item Smartbox: The smartbox is a smart sensor that is placed on transformer stations and can be used to optimize the balance of power load in the electrical grid of a region. I was responsible for the development of different modules.
+	\item Renesas DNN: A Python interface to a neural network accelerator that is used in onboard car computers by different german car manufacturers. We implemented a software which converts trained networks to a architecture that fits the accelerator's specification. We also added floating-to-fixpoint conversion. My responsibility was to split the neural network convolutions into smaller operations and the fixpoint optimization part.
+	\item Rega Cell phone detector: We developed a simple case-study-prototype for rega which determines the direction of a cellphone using two antennas. I was responsible for the part that localizes the direction and plots the results on a map.
+	\item Transformation Tool for Schematics: Supercomputing Systems is developing a new railway controller based on FPGAs to replace the old ones. For this purpose we need an Editor that can be used to draw electrical schematics and convert them to VHDL code. I was responsible for programming the GUI using JavaFX.
+\end{itemize}
+}
+
+\cventry{2012--2015}{Software Developer}{\textsc{New Voice AG}}{Zürich}{}{New Voice AG is a company which develops a software called MobiCall which is an Alarm-, Information-, Conference and Callrecording system which is built on top of a PBX system. My responsibility was to develop and maintain a plugin for locating Dect and WiFi devices inside buildings and triggering alarms.}
 
 %------------------------------------------------
 
@@ -168,21 +178,15 @@ My first year there (2006-2007) was an Internship as part of the “Informatikmi
 \cvitem{Phone}{+41 (0)44 635 43 13}
 \cvitem{Relation}{Supervision of Master Thesis}
 
-\subsection{Prof. Dr. Davide Scaramuzza}
-\cvitem{Link}{\href{http://rpg.ifi.uzh.ch/people\_scaramuzza.html}{http://rpg.ifi.uzh.ch/people\_scaramuzza.html}}
-\cvitem{E-Mail}{\href{mailto:sdavide@ifi.uzh.ch}{sdavide@ifi.uzh.ch}}
-\cvitem{Phone}{+41 (0)44 635 24 09}
-\cvitem{Relation}{Supervision of Master Project}
-
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Computer skills}
 
-\cvitem{Basic}{\textsc{Bash Scripts}, QT, Cuda}
-\cvitem{Intermediate}{\textsc{java}, \textsc{html}, \textsc{JavaScript}, \LaTeX, Microsoft Windows, OpenCV, Computer Hardware, Scikit Learn}
-\cvitem{Advanced}{\textsc{python}, \textsc{C++}, Linux}
+\cvitem{Basic}{Bash Scripts, QT, Cuda, .NET}
+\cvitem{Intermediate}{java, html, JavaScript, \LaTeX, Microsoft Windows, OpenCV, Computer Hardware, Scikit Learn, JavaFX, Iotivity}
+\cvitem{Advanced}{python, C++, Linux}
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
@@ -192,7 +196,8 @@ My first year there (2006-2007) was an Internship as part of the “Informatikmi
 
 \cvitemwithcomment{German}{Mothertongue}{}
 \cvitemwithcomment{Spanish}{Mothertongue}{}
-\cvitemwithcomment{English}{Intermediate}{Conversationally fluent}
+\cvitemwithcomment{English}{Proficient}{}
+\cvitemwithcomment{French}{Basic}{}
 
 %----------------------------------------------------------------------------------------
 
@@ -204,11 +209,12 @@ My first year there (2006-2007) was an Internship as part of the “Informatikmi
 
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
+\cvlistdoubleitem{Deep Learning}{Natural Language Processing}
+\cvlistitem{Reinforcement Learning}
 \cvlistdoubleitem{Reading}{Jiu Jitsu}
 \cvlistdoubleitem{Karate}{Cooking}
-\cvlistdoubleitem{Workout}{Swimming}
 
-\section{Master Grades - Exempt from module booking system}
+\section{Master's Diploma}
 
 \includegraphics[width=\textwidth]{pictures/master/module1.png}
 \includegraphics[width=\textwidth]{pictures/master/module2.png}
